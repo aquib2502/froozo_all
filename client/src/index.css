@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FDF6EC;
+  color: #4A2C17;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #F5ECD7; }
+::-webkit-scrollbar-thumb { background: #C4843A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8B5E3C; }
+
+.btn-primary {
+  @apply bg-froozo-coffee text-white px-4 py-2 rounded-xl font-semibold 
+         hover:bg-froozo-brown transition-all duration-200 shadow-warm 
+         active:scale-95 cursor-pointer;
+}
+.btn-secondary {
+  @apply bg-froozo-beige text-froozo-coffee border border-froozo-sand px-4 py-2 
+         rounded-xl font-semibold hover:bg-froozo-sand transition-all duration-200 
+         active:scale-95 cursor-pointer;
+}
+.btn-success {
+  @apply bg-froozo-green text-white px-4 py-2 rounded-xl font-semibold 
+         hover:bg-green-700 transition-all duration-200 active:scale-95 cursor-pointer;
+}
+.card {
+  @apply bg-white rounded-2xl shadow-card border border-froozo-sand/30;
+}
+.input-field {
+  @apply w-full border border-froozo-sand rounded-xl px-4 py-2.5 bg-white 
+         focus:outline-none focus:ring-2 focus:ring-froozo-caramel/40 
+         focus:border-froozo-caramel text-froozo-brown 
+         transition-all duration-200;
+}
+.page-header { @apply text-2xl font-bold text-froozo-brown; }
+.status-pending { @apply bg-amber-100 text-amber-800 border-amber-200; }
+.status-preparing { @apply bg-blue-100 text-blue-800 border-blue-200; }
+.status-ready { @apply bg-green-100 text-green-800 border-green-200; }
+.status-completed { @apply bg-gray-100 text-gray-600 border-gray-200; }
+.payment-paid { @apply bg-emerald-100 text-emerald-800 border-emerald-200; }
+.payment-pending { @apply bg-orange-100 text-orange-800 border-orange-200; }
