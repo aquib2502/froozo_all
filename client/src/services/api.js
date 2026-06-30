@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: 'https://froozo.anatech.fun/api',
 });
 
 export const getCategories = () => API.get('/categories');
